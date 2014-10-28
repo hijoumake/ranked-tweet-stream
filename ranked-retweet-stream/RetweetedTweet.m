@@ -28,7 +28,7 @@
 
 - (BOOL)isEqual:(id)object
 {
-    if ([object isMemberOfClass:[RetweetedTweet class]])
+    if ([object isKindOfClass:[RetweetedTweet class]])
     {
         RetweetedTweet * tweet = object;
         return [self isEqualToRetweetedTweet:tweet];
@@ -37,6 +37,11 @@
     {
         return NO;
     }
+}
+
+- (NSUInteger)hash
+{
+    return [self.tweetId hash];
 }
 
 - (BOOL)isEqualToRetweetedTweet:(RetweetedTweet *) aRetweetedTweet

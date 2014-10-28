@@ -17,5 +17,6 @@
 - (id)initWithId:(NSString *) idString andText:(NSString *) text;
 - (void)incrementRetweetCount;
 - (BOOL)isEqual:(id)object;
+- (NSUInteger)hash;
 
 @end
